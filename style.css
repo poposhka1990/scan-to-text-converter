@@ -15,6 +15,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 h2 {
@@ -74,6 +76,14 @@ input[type="file"] {
     height: 40px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
+}
+
+.logo {
+    height: 150px;
+}
+
+.save_button {
+    margin-top: 20px;
 }
 
 @-webkit-keyframes spin {
