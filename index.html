@@ -44,7 +44,7 @@
       document.getElementById('loader').style.display = 'block'; // Показываем индикатор загрузки
       Tesseract.recognize(
         image,
-        'eng', // Измените на нужный язык
+        'eng+rus', // Измените на нужный язык
         {
           logger: m => console.log(m)
         }
