@@ -41,7 +41,7 @@ button {
     border-radius: 4px;
 }
 
-button:hover {
+button:hover, input[type="file"]:hover {
     background-color: #45a049;
 }
 
