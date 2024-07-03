@@ -2,38 +2,22 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="./style.css" rel="stylesheet">
 <title>Конвертер изображений в текст</title>
-<style>
-  body { font-family: Arial, sans-serif; }
-  .container { margin: 20px; }
-  #textOutput { white-space: pre-wrap; }
-  .loader {
-    border: 6px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 6px solid #3498db;
-    width: 40px;
-    height: 40px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-  }
-  /* Safari */
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-</style>
 </head>
 <body>
 <div class="container">
   <h2>Конвертер изображений в текст</h2>
-  <input type="file" id="imageInput" accept="image/*">
-  <button onclick="convertImageToText()">Сохранить в текст</button>
-  <div id="loader" class="loader" style="display: none;"></div>
-  <pre id="textOutput"></pre>
+  <img class="logo" src="./assets/logo.svg">
+  <div class="button_div">
+    <input type="file" id="imageInput" accept="image/*">
+    <button onclick="convertImageToText()">Сохранить в текст</button>
+    <div id="loader" class="loader" style="display: none;"></div>
+    <pre id="textOutput"></pre>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2"></script>
