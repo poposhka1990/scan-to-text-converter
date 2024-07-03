@@ -71,17 +71,18 @@ input[type="file"] {
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
   }
+
   @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
   }
+
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-
 /* Медиазапросы для мобильных устройств */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .container {
       width: 90%;
     }
@@ -89,5 +90,9 @@ input[type="file"] {
     .loader {
         width: 30px;
         height: 30px;
+    }
+
+    h2 {
+        font-size: 1.75rem;
     }
 }
