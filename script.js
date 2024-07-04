@@ -18,22 +18,18 @@ fileInput.onchange = () => {
         }
       ).then(({ data: { text } }) => {
         document.querySelector('.logo').classList.remove('spin');
-        // document.getElementById('textOutput').textContent = text;
-        saveTextAsDoc(text);
+        saveTextAsFile(text);
       });
     } else {
       alert('Пожалуйста, выберите изображение для конвертации.');
     }
   }
 
-  function saveTextAsDoc(text) {
-    const blob = new Blob([text], { type: 'application/msword' });
+  function saveTextAsFile(text) {
+    const blob = new Blob([text], { type: 'text/plain' });
     const anchor = document.createElement('a');
-    anchor.download = 'converted-text.doc';
+    anchor.download = 'converted-text.txt';
     anchor.href = window.URL.createObjectURL(blob);
-    anchor.style.display = 'none'; // Скрываем ссылку, чтобы пользователь её не видел
-    document.body.appendChild(anchor);
     anchor.click();
-    document.body.removeChild(anchor); // Удаляем ссылку после сохранения файла
     window.URL.revokeObjectURL(anchor.href);
 }
