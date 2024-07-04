@@ -15,4 +15,4 @@
 ***
 
 Стэк технологий:
-[![My Skills](https://skillicons.dev/icons?i=html,css,javascript,tesseract)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,javascript,tesseract.js&theme=light)](https://skillicons.dev)
