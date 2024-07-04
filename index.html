@@ -13,46 +13,63 @@
 <div class="container">
   <h2>Конвертер изображений в текст</h2>
   <img class="logo" src="./assets/logo.svg">
-    <input type="file" id="imageInput" accept="image/*">
-    <button class="save_button" onclick="convertImageToText()">Сохранить в текст</button>
+    <label class="custom_button" for="imageInput">Выберите файл</label>
+    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+    <button class="save_button" onclick="convertImageToText()">Конвертировать в текст (.doc)</button>
     <div id="loader" class="loader" style="display: none;"></div>
     <pre id="textOutput"></pre>
-    <p>Поддерживаются английский и русский языки. Форматы изображений: bmp, jpg, png, pbm, webp</p>
+    <p class="description">Сервис преобразует изображения в текстовый файл с помощью технологии обработки изображений OCR</p> 
+    <p class="description">Идеально подходит для цифровизации документов и оптимизации процессов ввода данных</p>
+    <p class="description">Поддерживаются английский и русский языки</p>
+    <p class="description">Форматы изображений: bmp, jpg, png, pbm, webp</p>
   <footer>
-    <span>Разработано:</span><a href="https://github.com/poposhka1990" target="_blank"><img class="github_logo" src="./assets/github-logo.svg"></a>
+    <span>Сервис разработан:</span><a href="https://github.com/poposhka1990" target="_blank"><img class="github_logo" src="./assets/github-logo.svg"></a>
   </footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2"></script>
 <script>
+
+const fileInput = document.getElementById('imageInput');
+const fileLabel = document.querySelector('.custom_button');
+
+fileInput.onchange = () => {
+  /* Показываем название выбранного файла */
+  fileLabel.textContent = fileInput.files.length ? fileInput.files[0].name : 'Выберите файл';
+};
+
   function convertImageToText() {
     const image = document.getElementById('imageInput').files[0];
     if (image) {
       document.getElementById('loader').style.display = 'block'; // Показываем индикатор загрузки
       Tesseract.recognize(
         image,
-        'eng+rus', // Измените на нужный язык
+        'eng+rus', // Выбор языка
         {
           logger: m => console.log(m)
         }
       ).then(({ data: { text } }) => {
         document.getElementById('loader').style.display = 'none'; // Скрываем индикатор загрузки
         document.getElementById('textOutput').textContent = text;
-        saveTextAsFile(text);
+        saveTextAsDoc(text);
       });
     } else {
       alert('Пожалуйста, выберите изображение для конвертации.');
     }
   }
 
-  function saveTextAsFile(text) {
-    const blob = new Blob([text], { type: 'text/plain' });
+  function saveTextAsDoc(text) {
+    const blob = new Blob([text], { type: 'application/msword' });
     const anchor = document.createElement('a');
-    anchor.download = 'converted-text.txt';
+    anchor.download = 'converted-text.doc';
     anchor.href = window.URL.createObjectURL(blob);
+    anchor.style.display = 'none'; // Скрываем ссылку, чтобы пользователь её не видел
+    document.body.appendChild(anchor);
     anchor.click();
+    document.body.removeChild(anchor); // Удаляем ссылку после сохранения файла
     window.URL.revokeObjectURL(anchor.href);
-  }
+}
+
 </script>
 </body>
 </html>

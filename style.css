@@ -21,7 +21,7 @@ body {
 
 h2 {
     color: #333;
-}
+} 
 
 .button_div {
     width: 90%;
@@ -45,14 +45,14 @@ button:hover, input[type="file"]:hover {
     background-color: #45a049;
 }
 
-input[type="file"] {
+.custom_button {
     margin-top: 20px;
     cursor: pointer;
     border-radius: 4px;
-    background-color: #4CAF50;
+    background-color: rgba(0, 0, 255, 0.425);
     color: white;
     border: none;
-    padding: 7px 20px;
+    padding: 8px 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -96,6 +96,13 @@ input[type="file"] {
     100% { transform: rotate(360deg); }
 }
 
+.description {
+    margin-block-start: 0;
+    max-width: 400px;
+    display: flex;
+    margin: 5px auto;
+}
+
 footer {
     background-color: rgba(255, 255, 255, 0.5);
     position: fixed;
@@ -104,6 +111,9 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer span {
