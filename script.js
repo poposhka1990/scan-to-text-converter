@@ -9,16 +9,16 @@ fileInput.onchange = () => {
   function convertImageToText() {
     const image = document.getElementById('imageInput').files[0];
     if (image) {
-      document.getElementById('loader').style.display = 'block'; // Показываем индикатор загрузки
-      Tesseract.recognize(
-        image,
-        'eng+rus', // Выбор языка
+        document.querySelector('.logo').classList.add('spin');
+        Tesseract.recognize(
+            image,
+            'eng+rus', // Выбор языка
         {
           logger: m => console.log(m)
         }
       ).then(({ data: { text } }) => {
-        document.getElementById('loader').style.display = 'none'; // Скрываем индикатор загрузки
-        document.getElementById('textOutput').textContent = text;
+        document.querySelector('.logo').classList.remove('spin');
+        // document.getElementById('textOutput').textContent = text;
         saveTextAsDoc(text);
       });
     } else {

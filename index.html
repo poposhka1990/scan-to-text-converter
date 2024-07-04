@@ -20,7 +20,6 @@
     <label class="custom_button" for="imageInput">Выберите файл</label>
     <input type="file" id="imageInput" accept="image/*" style="display: none;">
     <button class="save_button" onclick="convertImageToText()">Конвертировать в текст (.doc)</button>
-    <div id="loader" class="loader" style="display: none;"></div>
     <pre id="textOutput"></pre>
     <p class="description">Сервис преобразует изображения в текстовый файл с помощью технологии обработки изображений OCR</p> 
     <p class="description">Идеально подходит для цифровизации документов и оптимизации процессов ввода данных</p>
@@ -30,7 +29,6 @@
     <span>Сервис разработан:</span><a href="https://github.com/poposhka1990" target="_blank"><img class="github_logo" src="./assets/github-logo.svg"></a>
   </footer>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2"></script>
 <script src="./script.js"></script>
 </body>
