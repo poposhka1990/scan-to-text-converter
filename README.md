@@ -5,7 +5,7 @@
 
 ***
 
-![Скриншот конвертера изображений в текст](https://github.com/poposhka1990/scan-to-text-converter/assets/71981296/fe9c8a53-b63d-452b-85b9-fb33f101a156)
+![Скриншот конвертера изображений в текст](https://github.com/poposhka1990/scan-to-text-converter/assets/71981296/6018ffda-72ed-40b7-8d64-36cbeac2d002)
 
 
 ***
