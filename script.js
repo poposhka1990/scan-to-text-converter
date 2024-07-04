@@ -1,5 +1,6 @@
 const fileInput = document.getElementById('imageInput');
 const fileLabel = document.querySelector('.custom_button');
+const customButton = document.querySelector('.save_button');
 
 fileInput.onchange = () => {
   /* Показываем название выбранного файла */
@@ -10,6 +11,7 @@ fileInput.onchange = () => {
     const image = document.getElementById('imageInput').files[0];
     if (image) {
         document.querySelector('.logo').classList.add('spin');
+        customButton.textContent = 'Конвертирую...';
         Tesseract.recognize(
             image,
             'eng+rus', // Выбор языка
@@ -18,7 +20,11 @@ fileInput.onchange = () => {
         }
       ).then(({ data: { text } }) => {
         document.querySelector('.logo').classList.remove('spin');
+        customButton.textContent = 'Готово! Смотрите загрузки';
         saveTextAsFile(text);
+        setTimeout(() => {
+          customButton.textContent = 'Конвертировать в текст';
+        }, 5000);
       });
     } else {
       alert('Пожалуйста, выберите изображение для конвертации.');
