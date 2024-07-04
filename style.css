@@ -101,7 +101,6 @@ button:hover, input[type="file"]:hover {
     max-width: 400px;
     display: flex;
     margin: 5px auto;
-    font-size: small;
 }
 
 footer {
@@ -115,7 +114,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: small;
 }
 
 footer span {
@@ -146,7 +144,12 @@ footer span {
         font-size: 1.75rem;
     }
 
+    .description {
+        font-size: small;
+    }
+
     footer {
         width: 100%;
+        font-size: small;
     }
 }
