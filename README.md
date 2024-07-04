@@ -2,11 +2,9 @@
 
 [Ссылка на сервис](https://poposhka1990.github.io/scan-to-text-converter/)
 
-
 ***
 
-![Скриншот конвертера изображений в текст](https://github.com/poposhka1990/scan-to-text-converter/assets/71981296/fe9c8a53-b63d-452b-85b9-fb33f101a156)
-
+![Скриншот конвертера изображений в текст](https://github.com/poposhka1990/scan-to-text-converter/assets/71981296/833af693-31e3-4466-92f4-e5bfe43377bb)
 
 ***
 
