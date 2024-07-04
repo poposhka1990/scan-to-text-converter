@@ -17,6 +17,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    max-width: 400px;
 }
 
 h2 {
@@ -100,6 +101,7 @@ button {
     max-width: 400px;
     display: flex;
     margin: 5px auto;
+    font-size: 0.8rem;
 }
 
 footer {
@@ -113,6 +115,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.8rem;
 }
 
 footer span {
@@ -137,10 +140,6 @@ footer span {
     .loader {
         width: 30px;
         height: 30px;
-    }
-
-    h2 {
-        font-size: 1.75rem;
     }
 
     .description {
