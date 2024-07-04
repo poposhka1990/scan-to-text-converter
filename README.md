@@ -1,5 +1,5 @@
 # Конвертер изображений в текст 🔄
-
+![Скриншот конвертера изображений в текст](https://poposhka1990.github.io/scan-to-text-converter/assets/screenshot.png)
 [Ссылка на сервис](https://poposhka1990.github.io/scan-to-text-converter/)
 
 ***
@@ -15,4 +15,4 @@
 ***
 
 Стэк технологий:
-[![My Skills](https://skillicons.dev/icons?i=html,css,javascript,tesseract.js&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,javascript&theme=light)](https://skillicons.dev) + Tesseract.js
